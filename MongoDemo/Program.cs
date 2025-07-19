@@ -10,11 +10,7 @@ namespace MongoDemo
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddSingleton<IMongoDatabase>(opt =>
-            {
-                var client=new MongoClient(); // local by deafult
-                return client.GetDatabase("LocalMongoDB");
-            });
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
