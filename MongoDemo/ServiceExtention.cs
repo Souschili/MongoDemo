@@ -12,7 +12,7 @@ namespace MongoDemo
                 return client.GetDatabase("LocalMongoDB");
             });
 
-            return services;
+            return services;     
         }
     }
 }
